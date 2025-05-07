@@ -1,9 +1,17 @@
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from django.views import generic
+# from django.contrib.auth import logout
+# from django.shortcuts import redirect
 
 from .forms import NoteForm
 from .models import Note
+
+
+# def logout_view(request):
+#     if request.method == 'GET':
+#         logout(request)
+#     return redirect('notes:home')
 
 
 class Home(generic.TemplateView):
